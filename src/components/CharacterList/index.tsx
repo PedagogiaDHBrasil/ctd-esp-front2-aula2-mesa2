@@ -1,12 +1,21 @@
 import React from "react";
 import Hoc from "../../Hoc";
 
+interface CharacterProps {
+  id: number;
+  image: string;
+  name: string;
+  status: string;
+  species: string;
+  gender: string;
+}
+
 function CharacterList({ rickandmortyData }) {
   return (
     <section>
-      {rickandmortyData.map((data, key) => {
+      {rickandmortyData.map((data: CharacterProps) => {
         return (
-          <article key={key} className="character">
+          <article key={data.id} className="character">
             <img src={data.image} alt={data.name} />
             <div>
               <p>Nome: {data.name}</p>
