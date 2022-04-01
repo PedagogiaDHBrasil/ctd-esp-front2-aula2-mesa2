@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Input from "./components/Input";
-import CharacterList from "./components/CharacterList";
+import CharacterList from "./components/CharacterList/index.tsx";
 
 const App = () => {
   const [rickandmorty, setRickandmorty] = useState(0);
